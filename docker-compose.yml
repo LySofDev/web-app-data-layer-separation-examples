@@ -17,8 +17,9 @@ services:
 
   angular-iframe-messaging-example:
     build: ./angular-iframe-messaging-example
+    command: npm run start
     ports:
-      - "3000:3333"
+      - "3000:4200"
     volumes:
       - ./angular-iframe-messaging-example:/app
       - /app/node_modules
