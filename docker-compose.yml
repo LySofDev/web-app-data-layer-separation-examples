@@ -3,14 +3,22 @@ services:
 
   # basic-iframe-messaging-example:
   #   image: danjellz/http-server
-  #   volumes:
-  #     - ./basic-iframe-messaging-example/src:/public
   #   ports:
   #     - "3000:8080"
+  #   volumes:
+  #     - ./basic-iframe-messaging-example/src:/public
 
-  flux-iframe-messaging-example:
-    image: danjellz/http-server
-    volumes:
-      - ./flux-iframe-messaging-example/src:/public
+  # flux-iframe-messaging-example:
+  #   image: danjellz/http-server
+  #   ports:
+  #     - "3000:8080"
+  #   volumes:
+  #     - ./flux-iframe-messaging-example/src:/public
+
+  angular-iframe-messaging-example:
+    build: ./angular-iframe-messaging-example
     ports:
-      - "3000:8080"
+      - "3000:3333"
+    volumes:
+      - ./angular-iframe-messaging-example:/app
+      - /app/node_modules
