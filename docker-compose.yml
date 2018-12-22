@@ -1,9 +1,16 @@
 version: '3.2'
 services:
 
-  basic-iframe-messaging-example:
+  # basic-iframe-messaging-example:
+  #   image: danjellz/http-server
+  #   volumes:
+  #     - ./basic-iframe-messaging-example/src:/public
+  #   ports:
+  #     - "3000:8080"
+
+  flux-iframe-messaging-example:
     image: danjellz/http-server
     volumes:
-      - ./basic-iframe-messaging-example/src:/public
+      - ./flux-iframe-messaging-example/src:/public
     ports:
       - "3000:8080"
