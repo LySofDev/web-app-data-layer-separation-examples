@@ -1,0 +1,9 @@
+version: '3.2'
+services:
+
+  basic-iframe-messaging-example:
+    image: danjellz/http-server
+    volumes:
+      - ./basic-iframe-messaging-example/src:/public
+    ports:
+      - "3000:8080"
